@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;netstandard2.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <PackageId>SayMaker</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>SayMaker</Authors>
+    <Description>Generate images and video from .NET on SayMaker: Veo 3.1, Kling 3.0, Seedance 2.0, Nano Banana 2, GPT Image 2.5 and more with one API key.</Description>
+    <PackageTags>video-generation;image-generation;ai;text-to-video;text-to-image;veo;kling;seedance;saymaker</PackageTags>
+    <PackageProjectUrl>https://saymaker.ai/?utm_source=nuget&amp;utm_medium=package</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/hanshs474/saymaker-dotnet</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+  </ItemGroup>
+</Project>
